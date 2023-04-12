@@ -1,5 +1,7 @@
 import streamlit as st
 from urllib.parse import urlparse, parse_qs
+
+openai.api_key = st.secrets["openai_api_key"]
 st.title("YouTube Transcript Embeddings Search")
 
 video_url = st.text_input("Enter a YouTube video url:")
