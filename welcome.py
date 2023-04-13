@@ -7,6 +7,8 @@ st.title("YouTube Transcript Embeddings Search")
 
 video_url = st.text_input("Enter a YouTube video url:")
 
+
+
 # get the video ID and channel from the URL
 url_components = urlparse(video_url)
 query_params = parse_qs(url_components.query)
@@ -15,6 +17,8 @@ channel = query_params["ab_channel"][0]
 
 st.write(channel)
 st.write(video_id)
+
+query = "what about Design Choice? "
 
 res = openai.Completion.create(
     engine='text-davinci-003',
@@ -27,6 +31,18 @@ res = openai.Completion.create(
     stop=None
 )
 
-res['choices'][0]['text'].strip()
+st.write(res['choices'][0]['text'].strip())
 
-
+def complete(prompt):
+    # query text-davinci-003
+    res = openai.Completion.create(
+        engine='text-davinci-003',
+        prompt=prompt,
+        temperature=0,
+        max_tokens=400,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0,
+        stop=None
+    )
+    return res['choices'][0]['text'].strip()
