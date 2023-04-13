@@ -22,9 +22,9 @@ openai.api_key = st.secrets["openai_api_key"]
 st.title("YouTube Transcript Embeddings Search")
 
 
+default_text = 'what is the size'
 
-
-query = st.text_input("Enter your Question")
+query = st.text_input("Enter your Question", value=default_text)
 
 
 def complete(prompt):
