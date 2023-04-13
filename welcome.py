@@ -14,9 +14,9 @@ pinecone.init(
 # connect to index
 index = pinecone.Index(index_name)
 # view index stats
-abc=index.describe_index_stats()
+index.describe_index_stats()
 
-st.write(abc)
+
 
 openai.api_key = st.secrets["openai_api_key"]
 st.title("YouTube Transcript Embeddings Search")
