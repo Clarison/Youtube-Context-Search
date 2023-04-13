@@ -24,7 +24,7 @@ st.title("YouTube Transcript Embeddings Search")
 
 
 
-query = st.text_input("Enter your name")
+query = st.text_input("Enter your Question")
 
 
 def complete(prompt):
