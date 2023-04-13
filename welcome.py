@@ -48,3 +48,6 @@ def complete(prompt):
         stop=None
     )
     return res['choices'][0]['text'].strip()
+
+
+st.write(complete(query))
