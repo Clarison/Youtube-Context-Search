@@ -20,6 +20,7 @@ index.describe_index_stats()
 
 openai.api_key = st.secrets["openai_api_key"]
 st.title("YouTube Transcript Embeddings Search")
+st.header("Lets Talk Macbook!") 
 
 
 default_text = 'what is the size'
