@@ -18,7 +18,7 @@ video_id = query_params["v"][0]
 
 st.write(video_id)
 
---query = "what about Design Choice? "
+#query = "what about Design Choice? "
 
 query = st.text_input("Enter your name")
 
