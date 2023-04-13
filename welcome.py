@@ -18,22 +18,9 @@ video_id = query_params["v"][0]
 
 st.write(video_id)
 
-#query = "what about Design Choice? "
 
 query = st.text_input("Enter your name")
 
-res = openai.Completion.create(
-    engine='text-davinci-003',
-    prompt=query,
-    temperature=0,
-    max_tokens=400,
-    top_p=1,
-    frequency_penalty=0,
-    presence_penalty=0,
-    stop=None
-)
-
-st.write(res['choices'][0]['text'].strip())
 
 def complete(prompt):
     # query text-davinci-003
