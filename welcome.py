@@ -21,18 +21,7 @@ index.describe_index_stats()
 openai.api_key = st.secrets["openai_api_key"]
 st.title("YouTube Transcript Embeddings Search")
 
-video_url = st.text_input("Enter a YouTube video url:")
 
-
-
-# get the video ID and channel from the URL
-url_components = urlparse(video_url)
-query_params = parse_qs(url_components.query)
-video_id = query_params["v"][0]
-
-
-
-st.write(video_id)
 
 
 query = st.text_input("Enter your name")
