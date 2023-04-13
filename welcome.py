@@ -85,3 +85,8 @@ def retrieve(query):
 
 
 st.write(complete(query))
+
+query_with_contexts = retrieve(query)
+query_with_contexts
+
+st.write(complete(query_with_contexts))
