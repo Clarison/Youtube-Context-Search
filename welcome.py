@@ -1,6 +1,22 @@
 import streamlit as st
 from urllib.parse import urlparse, parse_qs
 import openai
+import pinecone
+
+index_name = 'openai-youtube-transcriptions'
+
+# initialize connection to pinecone (get API key at app.pinecone.io)
+pinecone.init(
+    api_key="deb8442d-d32a-4485-a5b7-35f577f68c01",
+    environment="us-west4-gcp"  # may be different, check at app.pinecone.io
+)
+
+# connect to index
+index = pinecone.Index(index_name)
+# view index stats
+index.describe_index_stats()
+
+st.write(index.describe_index_stats())
 
 openai.api_key = st.secrets["openai_api_key"]
 st.title("YouTube Transcript Embeddings Search")
