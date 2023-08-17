@@ -1,6 +1,6 @@
 # youtubecontextsearch
 
-appliaction - https://clarison-youtubecontextsearch-welcome-kefb0r.streamlit.app/
+application - https://clarison-youtubecontextsearch-welcome-kefb0r.streamlit.app/
 
 codelabs - https://codelabs-preview.appspot.com/?file_id=1HwKvjj4OvVfTC3GWpBapFol0qG8PUMQ2HaEGbdlU0MI#0
 
